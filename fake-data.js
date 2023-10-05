@@ -5,6 +5,22 @@ const UserList = [
     username: "johndoe123",
     age: 30,
     nationality: "USA",
+    friends: [
+      {
+        id: 2,
+        name: "Jane Smith",
+        username: "janesmith456",
+        age: 25,
+        nationality: "Canada",
+      },
+      {
+        id: 3,
+        name: "Michael Johnson",
+        username: "mikej",
+        age: 28,
+        nationality: "UK",
+      },
+    ],
   },
   {
     id: 2,
@@ -12,6 +28,15 @@ const UserList = [
     username: "janesmith456",
     age: 25,
     nationality: "Canada",
+    friends: [
+      {
+        id: 1,
+        name: "John Doe",
+        username: "johndoe123",
+        age: 30,
+        nationality: "USA",
+      },
+    ],
   },
   {
     id: 3,
@@ -46,7 +71,7 @@ const UserList = [
     name: "Kim Lee",
     username: "kiml",
     age: 26,
-    nationality: "South Korea",
+    nationality: "Korea",
   },
   {
     id: 8,
@@ -130,7 +155,7 @@ const UserList = [
     name: "Aisha Ahmed",
     username: "aishaa",
     age: 27,
-    nationality: "Saudi Arabia",
+    nationality: "Arabia",
   },
   {
     id: 20,
@@ -141,4 +166,127 @@ const UserList = [
   },
 ];
 
-module.exports = { UserList };
+const MovieList = [
+  {
+    id: 1,
+    name: "Goodfellas",
+    yearOfPublication: 2001,
+    isInTheaters: true,
+  },
+  {
+    id: 2,
+    name: "The Godfather",
+    yearOfPublication: 2002,
+    isInTheaters: false,
+  },
+  {
+    id: 3,
+    name: "The Silence of the Lambs",
+    yearOfPublication: 2003,
+    isInTheaters: true,
+  },
+  {
+    id: 4,
+    name: "Jurassic Park",
+    yearOfPublication: 2004,
+    isInTheaters: false,
+  },
+  {
+    id: 5,
+    name: "Schindler's List",
+    yearOfPublication: 2005,
+    isInTheaters: true,
+  },
+  {
+    id: 6,
+    name: "Pulp Fiction",
+    yearOfPublication: 2006,
+    isInTheaters: false,
+  },
+  {
+    id: 7,
+    name: "Avatar",
+    yearOfPublication: 2007,
+    isInTheaters: true,
+  },
+  {
+    id: 8,
+    name: "Forrest Gump",
+    yearOfPublication: 2008,
+    isInTheaters: false,
+  },
+  {
+    id: 9,
+    name: "The Lord of the Rings",
+    yearOfPublication: 2009,
+    isInTheaters: true,
+  },
+  {
+    id: 10,
+    name: "E.T. the Extra-Terrestrial",
+    yearOfPublication: 2010,
+    isInTheaters: false,
+  },
+  {
+    id: 11,
+    name: "Star Wars",
+    yearOfPublication: 2011,
+    isInTheaters: true,
+  },
+  {
+    id: 12,
+    name: "The Matrix",
+    yearOfPublication: 2012,
+    isInTheaters: false,
+  },
+  {
+    id: 13,
+    name: "Fight Club",
+    yearOfPublication: 2013,
+    isInTheaters: true,
+  },
+  {
+    id: 14,
+    name: "Braveheart",
+    yearOfPublication: 2014,
+    isInTheaters: false,
+  },
+  {
+    id: 15,
+    name: "Titanic",
+    yearOfPublication: 2015,
+    isInTheaters: true,
+  },
+  {
+    id: 16,
+    name: "The Terminator",
+    yearOfPublication: 2016,
+    isInTheaters: false,
+  },
+  {
+    id: 17,
+    name: "Inception",
+    yearOfPublication: 2017,
+    isInTheaters: true,
+  },
+  {
+    id: 18,
+    name: "The Shawshank Redemption",
+    yearOfPublication: 2018,
+    isInTheaters: false,
+  },
+  {
+    id: 19,
+    name: "Gladiator",
+    yearOfPublication: 2019,
+    isInTheaters: true,
+  },
+  {
+    id: 20,
+    name: "The Dark Knight",
+    yearOfPublication: 2020,
+    isInTheaters: false,
+  },
+];
+
+module.exports = { UserList, MovieList };
