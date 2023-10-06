@@ -205,7 +205,7 @@ const DisplayData = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr 1fr",
+          gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
           width: "100vw",
         }}
       >
@@ -241,7 +241,7 @@ const DisplayData = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr 1fr",
+          gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
           width: "100vw",
         }}
       >
