@@ -149,10 +149,12 @@ const DisplayData = () => {
             margin: "2px",
           }}
           onClick={() => {
-            createUserGQL({
-              variables: { input: createUser },
-            });
-            refetch();
+            if (createUser.name && createUser.username && createUser.age) {
+              createUserGQL({
+                variables: { input: createUser },
+              });
+              refetch();
+            }
           }}
         >
           Create user
@@ -200,56 +202,69 @@ const DisplayData = () => {
           )}
         </div>
       </div>
-
-      {data &&
-        data.users.map((user) => {
-          return (
-            <div
-              key={user.id}
-              style={{
-                border: "solid 1px black",
-                borderRadius: "4px",
-                margin: "1rem",
-                backgroundColor: "#0ff0f020",
-                fontFamily: "sans-serif",
-                width: "400px",
-              }}
-            >
-              <div>
-                <p>Name: {user.name}</p>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr 1fr",
+          width: "100vw",
+        }}
+      >
+        {data &&
+          data.users.map((user) => {
+            return (
+              <div
+                key={user.id}
+                style={{
+                  border: "solid 1px black",
+                  borderRadius: "4px",
+                  margin: "1rem",
+                  backgroundColor: "#0ff0f020",
+                  fontFamily: "sans-serif",
+                }}
+              >
+                <div>
+                  <p>Name: {user.name}</p>
+                </div>
+                <div>
+                  <p>User Name: {user.username}</p>
+                </div>
+                <div>
+                  <p>Age: {user.age}</p>
+                </div>
+                <div>
+                  <p>Nationality: {user.nationality}</p>
+                </div>
               </div>
-              <div>
-                <p>User Name: {user.username}</p>
+            );
+          })}
+      </div>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr 1fr",
+          width: "100vw",
+        }}
+      >
+        {moviesData &&
+          moviesData.movies.map((movie) => {
+            return (
+              <div
+                key={movie.id}
+                style={{
+                  border: "solid 1px black",
+                  borderRadius: "4px",
+                  margin: "1rem",
+                  backgroundColor: "#ff000020",
+                  fontFamily: "sans-serif",
+                }}
+              >
+                <div>
+                  <p>Name: {movie.name}</p>
+                </div>
               </div>
-              <div>
-                <p>Age: {user.age}</p>
-              </div>
-              <div>
-                <p>Nationality: {user.nationality}</p>
-              </div>
-            </div>
-          );
-        })}
-      {moviesData &&
-        moviesData.movies.map((movie) => {
-          return (
-            <div
-              key={movie.id}
-              style={{
-                border: "solid 1px black",
-                borderRadius: "4px",
-                margin: "1rem",
-                backgroundColor: "#ff000020",
-                fontFamily: "sans-serif",
-                width: "400px",
-              }}
-            >
-              <div>
-                <p>Name: {movie.name}</p>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+      </div>
     </div>
   );
 };

@@ -6,9 +6,18 @@ const resolvers = {
     // USER RESOLVERS
     users: () => {
       // here I would retrieve data from DB
+
+      //Using union to error handling
+      // if (UserList) {
+      //   return { users: UserList };
+      // } else {
+      //   return {
+      //     message: "There was an error",
+      //   };
+      // }
       return UserList;
     },
-    user: (parent, args) => {
+    user: (parent, args, context, info) => {
       const id = args.id;
       const user = _.find(UserList, { id: Number(id) });
       return user;
@@ -25,7 +34,16 @@ const resolvers = {
     },
   },
   User: {
-    favouriteMovies: () => {
+    favouriteMovies: (parent, args, context, info) => {
+      // parent returns the object parent if the data returned is nested
+      console.log("PARENT: ", parent);
+      // args are the arguments of the queries to access data
+      console.log("ARGS: ", args);
+      // context allows to pass vaules, variables, etc... to the query
+      console.log("CONTEXT: ", context);
+      console.log("HEADERS: ", context.req.headers);
+      // info shows the information of the request
+      console.log("INFO: ", info);
       return _.filter(
         MovieList,
         (movie) =>
@@ -59,6 +77,16 @@ const resolvers = {
       return null;
     },
   },
+  //Using union to error handling
+  // UsersResult: {
+  //   __resolveType() {
+  //     if (Object.users) {
+  //       return Object.users;
+  //     } else {
+  //       return Object.message;
+  //     }
+  //   },
+  // },
 };
 
 module.exports = { resolvers };
