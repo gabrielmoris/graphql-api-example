@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "startserver": "cd server && npm run start ",
-    "startapp": "cd client-react && npm run start"
+    "start-server": "cd server && npm run start ",
+    "start-react": "cd client-react && npm run start",
+    "start-vue": "cd client-nuxt && npm run dev"
   },
   "repository": {
     "type": "git",
