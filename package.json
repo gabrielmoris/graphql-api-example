@@ -1,0 +1,23 @@
+{
+  "name": "graphql-learning",
+  "version": "1.0.0",
+  "description": "graphql",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "startserver": "cd server && npm run start ",
+    "startapp": "cd client-react && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielmoris/graphql-api-example.git"
+  },
+  "keywords": [
+    "graphql"
+  ],
+  "author": "gabriel c. moris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielmoris/graphql-api-example/issues"
+  }
+}

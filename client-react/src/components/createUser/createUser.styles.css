@@ -1,0 +1,15 @@
+.createuser-wrapper {
+  width: 200px;
+  margin: 50px;
+}
+
+input {
+  width: 200px;
+  margin: 2px;
+}
+
+select,
+.create-user-btn {
+  width: 207px;
+  margin: 2px;
+}
